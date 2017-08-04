@@ -13,10 +13,10 @@ if __name__ == "__main__":
         exit(1)
     print("{:s} {:s} {:s} = ".format(a, op, b), end='')
     if op == '+':
-        print("{:d}".format(add(int(a),int(b))))
+        print("{:d}".format(add(int(a), int(b))))
     if op == '-':
-        print("{:d}".format(sub(int(a),int(b))))
+        print("{:d}".format(sub(int(a), int(b))))
     if op == '*':
-        print("{:d}".format(mul(int(a),int(b))))
-    if op == '/': 
-        print("{:d}".format(div(int(a),int(b))))
+        print("{:d}".format(mul(int(a), int(b))))
+    if op == '/':
+        print("{:d}".format(div(int(a), int(b))))
