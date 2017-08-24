@@ -1,0 +1,27 @@
+The ``add_integer(a, b)`` module
+======================
+
+Using ``add_integer(a, b)`` with integers or floats
+-------------------
+
+This is an example text file in reStructuredText format. 
+First import ``add_integer`` from the ``0-add_integer`` module:
+
+>>>f  = __import__('0-add_integer').add_integer
+
+"""Passing Tests"""
+>>>f(1, 2)
+3
+>>>f(100, -2)
+98
+>>>f(100.3, -2)
+98
+>>>f(6, 2)
+8
+
+"""Test that should raise a TypeError"""
+f([1], 2)
+Traceback (most recent call last):
+... TypeError: a must be an integer
+
+
