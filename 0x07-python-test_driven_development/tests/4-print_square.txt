@@ -1,19 +1,23 @@
-The ``add_integer(a, b)`` module
+The ``print_square(size)`` module
 ======================
 
-Using ``add_integer(a, b)`` with integers or floats
+Using ``print_square(size)`` with integers or floats
 -------------------
 
 This is an example text file in reStructuredText format. 
-First import ``add_integer`` from the ``0-add_integer`` module:
+First import ``print_square`` from the ``4-print_square`` module:
 
->>>f  = __import__('0-add_integer').add_integer
+>>>f  = __import__('4-print_square').print_square
 
 """Passing Tests"""
->>>f(1, 2)
-3
->>>f(100, -2)
-98
+>>>f(3)
+###
+###
+###
+
+>>>f(1)
+#
+
 >>>f(100.3, -2)
 98
 >>>f(6, 2)
@@ -26,5 +30,5 @@ TypeError: a must be an integer
 
 >>>f(1, 2, 3)
 Traceback (most recent call last):
-TypeError: add_integer() takes 2 positional arguments but 3 were given
+TypeError: print_square() takes 2 positional arguments but 3 were given
 

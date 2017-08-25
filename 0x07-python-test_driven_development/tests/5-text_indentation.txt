@@ -1,13 +1,13 @@
-The ``add_integer(a, b)`` module
+The ``text_indentation(text)`` module
 ======================
 
-Using ``add_integer(a, b)`` with integers or floats
+Using ``text_indentation(text)`` with integers or floats
 -------------------
 
 This is an example text file in reStructuredText format. 
-First import ``add_integer`` from the ``0-add_integer`` module:
+First import ``text_indentation`` from the ``5-text_indentation`` module:
 
->>>f  = __import__('0-add_integer').add_integer
+>>>f  = __import__('5-text_indentation').text_indentation
 
 """Passing Tests"""
 >>>f(1, 2)
@@ -26,5 +26,5 @@ TypeError: a must be an integer
 
 >>>f(1, 2, 3)
 Traceback (most recent call last):
-TypeError: add_integer() takes 2 positional arguments but 3 were given
+TypeError: text_indentation() takes 2 positional arguments but 3 were given
 
