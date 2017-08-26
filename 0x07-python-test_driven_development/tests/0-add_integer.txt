@@ -7,24 +7,58 @@ Using ``add_integer(a, b)`` with integers or floats
 This is an example text file in reStructuredText format. 
 First import ``add_integer`` from the ``0-add_integer`` module:
 
->>>f  = __import__('0-add_integer').add_integer
+>>> add_integer = __import__('0-add_integer').add_integer
 
 """Passing Tests"""
->>>f(1, 2)
+>>> add_integer(1, 2)
 3
->>>f(100, -2)
+>>> add_integer(100, -2)
 98
->>>f(100.3, -2)
+>>> add_integer(100.3, -2)
 98
->>>f(6, 2)
+>>> add_integer(6, 2)
 8
 
-"""Test that should raise a TypeError"""
->>>f([1], 2)
+"""Checking for module docstring"""
+>>> m = __import__("0-add_integer").__doc__
+>>> len(m) > 1
+True
+
+"""Checking for function docstring"""
+>>> f = __import__("0-add_integer").add_integer.__doc__
+>>> len(f) > 1
+True
+
+
+"""Test that should raise an Error"""
+>>> add_integer([1], 2)
 Traceback (most recent call last):
 TypeError: a must be an integer
 
->>>f(1, 2, 3)
+>>> add_integer(1, 2, 3)
 Traceback (most recent call last):
 TypeError: add_integer() takes 2 positional arguments but 3 were given
 
+>>> add_integer(3, "2")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer((2,), {"key": "value"})
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(True, 1)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(0, False)
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer()
+Traceback (most recent call last):
+TypeError: add_integer() missing 2 required positional arguments: 'a' and 'b'
+
+>>> add_integer(1)
+Traceback (most recent call last):
+TypeError: add_integer() missing 1 required positional argument: 'b'
