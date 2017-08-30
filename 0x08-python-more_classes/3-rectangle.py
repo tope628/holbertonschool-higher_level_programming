@@ -40,4 +40,4 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return ("")
         s = ''.join((('#' * self.__width) + '\n')) * self.__height
-        return s
+        return s[:-1]
