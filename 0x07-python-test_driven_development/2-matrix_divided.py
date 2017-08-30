@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Matrix Divided Module
 
 This module divides all elements of a matrix. Otherwise raise a

@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Print Square Module
 
 This module prints a square with a hashtag. Otherwise raise a TypeErr
