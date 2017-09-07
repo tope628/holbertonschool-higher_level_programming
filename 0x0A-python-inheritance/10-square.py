@@ -1,11 +1,15 @@
 #!/usr/bin/python3
 """Square Module
 """
+
+
 Rectangle = __import__('9-rectangle').Rectangle
+
+
 class Square(Rectangle):
-	"""square class"""
+    """square class"""
     def __init__(self, size):
-     """
+        """
      Args:
          self (object): The first parameter.
          size (integer): The second parameter.
@@ -15,7 +19,7 @@ class Square(Rectangle):
         super().__init__(size, size)
 
     def area(self):
-     """
+        """
      Args:
          self (object): The first parameter.
      """
