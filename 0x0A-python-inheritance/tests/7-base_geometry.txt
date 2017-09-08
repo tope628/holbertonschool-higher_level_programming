@@ -24,20 +24,8 @@ Checking for area method docstring
         >>> len(f) > 1
         True
 
-Checking for integer_validator method docstring
-        >>> f = __import__("7-base_geometry").BaseGeometry.integer_validator.__
-doc__
-        >>> len(f) > 1
-        True
-
 Checking given test case
         >>> bg = BaseGeometry()
-
-      	>>> bg.integer_validator("my_int", 12)
-	True
-
-      	>>> bg.integer_validator("width", 89)
-	True
 
        	>>> bg.integer_validator("name", "John")
 	Traceback (most recent call last):
@@ -72,14 +60,9 @@ Checking integer_validator with list
                   ...
         TypeError: box must be an integer
 
-Checking integer_validator with None object
-        >>> bg.integer_validator("None", None)
-        False
-
 Checking integer_validator with NaN object
         >>> bg.integer_validator("Nan", NaN)
         Traceback (most recent call last):
-                  ...
         NameError: name 'NaN' is not defined
 
 Checking integer_validator with infinity object
