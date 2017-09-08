@@ -45,8 +45,5 @@ class Student:
          Returns:
             string: dictionary description
         """
-        for key in json:
-            try:
-                setattr(self, key, json[key])
-            except:
-                pass
+        for k, v in json.items():
+            self.__dict__[k] = v
