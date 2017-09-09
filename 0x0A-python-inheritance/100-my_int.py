@@ -12,5 +12,5 @@ class MyInt(int):
 
     def __ne__(self, int):
         """ Inverses result of != """
-        self.int = int(int)
+        self.int = int
         return not self.__eq__(self.int)
