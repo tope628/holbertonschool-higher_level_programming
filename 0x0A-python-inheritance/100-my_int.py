@@ -7,10 +7,8 @@ class MyInt(int):
     """ MyInt Class """
     def __eq__(self, int):
         """ Inverses result of == """
-        self.int = int
-        return not self.int
+        return super().__ne__(int)
 
     def __ne__(self, int):
         """ Inverses result of != """
-        self.int = int
-        return not self.__eq__(self.int)
+        return super().__eq__(int)
