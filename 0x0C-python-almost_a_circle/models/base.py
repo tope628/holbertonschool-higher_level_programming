@@ -21,17 +21,17 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
-#    def to_json_string(list_dictionaries):
-#        """
-#     Args:
-#         list_dictionaries (dict): The first parameter.
-#
-#     Returns:
-#        string: JSON string
-#        """
-#        if list_dictionaries is None:
-#            return "[]"
-#        return json.dumps(list_dictionaries)
+    def to_json_string(list_dictionaries):
+        """
+     Args:
+         list_dictionaries (dict): The first parameter.
+
+     Returns:
+        string: JSON string
+        """
+        if list_dictionaries is None:
+            return "[]"
+        return json.dumps(list_dictionaries)
 #
 #    def save_to_file(cls, list_objs):
 #        """
