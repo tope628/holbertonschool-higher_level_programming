@@ -95,12 +95,13 @@ class Base:
         """
 
         filename = cls.__name__+".json"
-        if filename is None:
+        try:
+            with open(filename, mode='r', encoding='utf-8') as f:
+                my_json = cls.from_json_string(f.read())
+            for inst in my_json:
+                    return [cls.create(**inst)]
+        except:
             return []
-        with open(filename, mode='r', encoding='utf-8') as f:
-            my_json = cls.from_json_string(f.read())
-        for inst in my_json:
-                return [cls.create(**inst)]
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
