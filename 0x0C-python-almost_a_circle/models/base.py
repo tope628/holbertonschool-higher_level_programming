@@ -64,6 +64,6 @@ class Base:
      Returns:
         string: JSON string
         """
-        if json_string is None or json_string == {}:
+        if json_string is None or json_string == "":
             return "[]"
         return json.loads(json_string)
