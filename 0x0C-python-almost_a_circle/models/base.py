@@ -29,7 +29,7 @@ class Base:
      Returns:
         string: JSON string
         """
-        if list_dictionaries is None:
+        if list_dictionaries is None or list_dictionaries == {}:
             return "[]"
         return json.dumps(list_dictionaries)
 #
