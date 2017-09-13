@@ -79,11 +79,9 @@ class Base:
         dummy (object): instance with set attributes.
         """
         if cls.__name__ == "Rectangle":
-            from models.rectangle import Rectangle
-            dummy = Rectangle(1, 1)
+            dummy = cls(1, 1)
         if cls.__name__ == "Square":
-            from models.square import Square
-            dummy = Square(1)
+            dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
 
