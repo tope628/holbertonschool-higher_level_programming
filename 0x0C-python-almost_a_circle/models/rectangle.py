@@ -189,18 +189,18 @@ class Rectangle(Base):
             for x in range(self.__width):
                 print('#', end='')
             print()
-#
-#    def __str__(self):
-#        """
-#     Args:
-#         my_obj (object): The first parameter.
-#         filename (file): The second parameter.
-#
-#     Returns:
-#        string: JSON string
-#        """
-#        return ("[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
-#            self.id, self.__x, self.__y, self.__width, self.__height))
+
+    def __str__(self):
+        """
+     Args:
+         my_obj (object): The first parameter.
+         filename (file): The second parameter.
+
+     Returns:
+        string: JSON string
+        """
+        return ("[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
+            self.id, self.__x, self.__y, self.__width, self.__height))
 #
 #    def update(self, *args, **kwargs):
 #        """
