@@ -124,3 +124,20 @@ class Base:
                     my_dict = obj.to_dictionary()
                     my_list.append(my_dict)
                 f.write(cls.to_json_string(my_list))
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+     Args:
+        cls (class): The first parameter.
+     Returns:
+        list (list): instance with set attributes.
+        """
+
+        filename = cls.__name__+".csv"
+        if filename == None:
+            return []
+        with open(filename, mode='r', encoding='utf-8') as f:
+            my_json = cls.from_json_string(f.read())
+        for inst in my_json:
+                return [cls.create(**inst)]
