@@ -30,7 +30,7 @@ class Base:
         string: JSON string
         """
         if list_dictionaries is None or len(list_dictionaries) == 0:
-            return "[]"
+            list_dictionaries =  []
         return json.dumps(list_dictionaries)
 #
 #    def save_to_file(cls, list_objs):
