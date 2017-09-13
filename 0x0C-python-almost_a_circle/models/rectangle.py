@@ -201,28 +201,28 @@ class Rectangle(Base):
         """
         return ("[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
             self.id, self.__x, self.__y, self.__width, self.__height))
-#
-#    def update(self, *args, **kwargs):
-#        """
-#     Args:
-#         my_obj (object): The first parameter.
-#         filename (file): The second parameter.
-#
-#     Returns:
-#        string: JSON string
-#        """
-#        if args is not None:
-#            for k, v in kwargs.items():
-#                if k == "id":
-#                    self.id = v
-#                if k == "width":
-#                    self.width = v
-#                if k == "height":
-#                    self.height = v
-#                if k == "x":
-#                    self.x = v
-#                if k == "y":
-#                    self.y = v
+
+    def update(self, *args, **kwargs):
+        """
+     Args:
+         my_obj (object): The first parameter.
+         filename (file): The second parameter.
+
+     Returns:
+        string: JSON string
+        """
+        if args is not None:
+            for k, v in kwargs.items():
+                if k == "id":
+                    self.id = v
+                if k == "width":
+                    self.width = v
+                if k == "height":
+                    self.height = v
+                if k == "x":
+                    self.x = v
+                if k == "y":
+                    self.y = v
 #
 #    def to_dictionary(self):
 #        """
