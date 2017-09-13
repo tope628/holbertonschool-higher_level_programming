@@ -223,20 +223,20 @@ class Rectangle(Base):
                     self.x = v
                 if k == "y":
                     self.y = v
-#
-#    def to_dictionary(self):
-#        """
-#     Args:
-#         my_obj (object): The first parameter.
-#         filename (file): The second parameter.
-#
-#     Returns:
-#        string: JSON string
-#        """
-#        my_dict = {}
-#        my_dict["id"] = self.id
-#        my_dict["width"] = self.width
-#        my_dict["height"] = self.height
-#        my_dict["x"] = self.x
-#        my_dict["y"] = self.y
-#        return my_dict
+
+    def to_dictionary(self):
+        """
+     Args:
+         my_obj (object): The first parameter.
+         filename (file): The second parameter.
+
+     Returns:
+        string: JSON string
+        """
+        my_dict = {}
+        my_dict["id"] = self.id
+        my_dict["width"] = self.width
+        my_dict["height"] = self.height
+        my_dict["x"] = self.x
+        my_dict["y"] = self.y
+        return my_dict
