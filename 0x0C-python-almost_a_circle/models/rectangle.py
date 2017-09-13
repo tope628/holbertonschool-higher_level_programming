@@ -171,24 +171,24 @@ class Rectangle(Base):
         string: JSON string
         """
         return self.__width * self.__height
-#
-#    def display(self):
-#        """
-#     Args:
-#         my_obj (object): The first parameter.
-#         filename (file): The second parameter.
-#
-#     Returns:
-#        string: JSON string
-#        """
-#        for i in range(self.__y):
-#            print()
-#        for i in range(self.__height):
-#            for x in range(self.__x):
-#                print(' ', end='')
-#            for x in range(self.__width):
-#                print('#', end='')
-#            print()
+
+    def display(self):
+        """
+     Args:
+         my_obj (object): The first parameter.
+         filename (file): The second parameter.
+
+     Returns:
+        string: JSON string
+        """
+        for i in range(self.__y):
+            print()
+        for i in range(self.__height):
+            for x in range(self.__x):
+                print(' ', end='')
+            for x in range(self.__width):
+                print('#', end='')
+            print()
 #
 #    def __str__(self):
 #        """
