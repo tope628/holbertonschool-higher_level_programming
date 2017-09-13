@@ -97,13 +97,13 @@ class Base:
         """
 
         filename = cls.__name__+".json"
-        if filename == None:
+        if filename is None:
             return []
         with open(filename, mode='r', encoding='utf-8') as f:
             my_json = cls.from_json_string(f.read())
         for inst in my_json:
                 return [cls.create(**inst)]
-        
+
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """
@@ -133,9 +133,8 @@ class Base:
      Returns:
         list (list): instance with set attributes.
         """
-
         filename = cls.__name__+".csv"
-        if filename == None:
+        if filename is None:
             return []
         with open(filename, mode='r', encoding='utf-8') as f:
             my_json = cls.from_json_string(f.read())
