@@ -62,7 +62,7 @@ class Base:
          json_string (dict): The first parameter.
 
      Returns:
-        string: JSON string
+        list: JSON list of instances
         """
         if json_string is None or json_string == "":
             return []
@@ -87,6 +87,23 @@ class Base:
         dummy.update(**dictionary)
         return dummy
 
+    @classmethod
+    def load_from_file(cls):
+        """
+     Args:
+        cls (class): The first parameter.
+     Returns:
+        list (list): instance with set attributes.
+        """
+
+        filename = cls.__name__+".json"
+        if filename == None:
+            return []
+        with open(filename, mode='r', encoding='utf-8') as f:
+            my_json = cls.from_json_string(f.read())
+        for inst in my_json:
+                return [cls.create(**inst)]
+        
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """
