@@ -67,3 +67,43 @@ class Base:
         if json_string is None or json_string == "":
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+     Args:
+         cls (class): The first parameter.
+         dictionary (dict): The second parameter.
+
+     Returns:
+        dummy (object): instance with set attributes.
+        """
+        if cls.__name__ == "Rectangle":
+            from models.rectangle import Rectangle
+            dummy = Rectangle(1, 1)
+        if cls.__name__ == "Square":
+            from models.square import Square
+            dummy = Square(1)
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+     Args:
+         cls (class): The first parameter.
+         list_objs (list): The second parameter.
+
+     Returns:
+        string: JSON string
+        """
+        my_list = []
+        filename = cls.__name__+".csv"
+        with open(filename, mode='w', encoding='utf-8') as f:
+            if list_objs is None:
+                f.write(cls.to_json_string(my_list))
+            else:
+                for obj in list_objs:
+                    my_dict = obj.to_dictionary()
+                    my_list.append(my_dict)
+                f.write(cls.to_json_string(my_list))
