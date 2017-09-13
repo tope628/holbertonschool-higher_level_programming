@@ -21,36 +21,36 @@ class Square(Rectangle):
         """
         super().__init__(size, size, x, y, id)
         self.size = size
-#
-#    @property
-#    def size(self):
-#        """
-#     Args:
-#         my_obj (object): The first parameter.
-#         filename (file): The second parameter.
-#
-#     Returns:
-#        string: JSON string
-#        """
-#        return self.width
-#
-#    @size.setter
-#    def size(self, value):
-#        """
-#     Args:
-#         my_obj (object): The first parameter.
-#         filename (file): The second parameter.
-#
-#     Returns:
-#        string: JSON string
-#        """
-#        if type(value) is not int:
-#            raise TypeError("width must be an integer")
-#        elif value <= 0:
-#            raise ValueError("width must be > 0")
-#        else:
-#            self.width = value
-#            self.height = value
+
+    @property
+    def size(self):
+        """
+     Args:
+         my_obj (object): The first parameter.
+         filename (file): The second parameter.
+
+     Returns:
+        string: JSON string
+        """
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """
+     Args:
+         my_obj (object): The first parameter.
+         filename (file): The second parameter.
+
+     Returns:
+        string: JSON string
+        """
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        elif value <= 0:
+            raise ValueError("width must be > 0")
+        else:
+            self.width = value
+            self.height = value
 
     def __str__(self):
         """
