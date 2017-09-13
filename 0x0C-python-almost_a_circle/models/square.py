@@ -63,36 +63,36 @@ class Square(Rectangle):
         """
         return ("[Square] ({:d}) {:d}/{:d} - {:d}".format(
             self.id, self.x, self.y, self.width))
-#
-#    def update(self, *args, **kwargs):
-#        """
-#     Args:
-#         my_obj (object): The first parameter.
-#         filename (file): The second parameter.
-#
-#     Returns:
-#        string: JSON string
-#        """
-#        if len(args) == 0:
-#            for k, v in kwargs.items():
-#                if k == "id":
-#                    self.id = v
-#                if k == "size":
-#                    self.size = v
-#                if k == "x":
-#                    self.x = v
-#                if k == "y":
-#                    self.y = v
-#        else:
-#            for idx, arg in enumerate(args):
-#                if idx == 0:
-#                    self.id = arg
-#                if idx == 1:
-#                    self.size = arg
-#                if idx == 2:
-#                    self.x = arg
-#                if idx == 3:
-#                    self.y = arg
+
+    def update(self, *args, **kwargs):
+        """
+     Args:
+         my_obj (object): The first parameter.
+         filename (file): The second parameter.
+
+     Returns:
+        string: JSON string
+        """
+        if len(args) == 0:
+            for k, v in kwargs.items():
+                if k == "id":
+                    self.id = v
+                if k == "size":
+                    self.size = v
+                if k == "x":
+                    self.x = v
+                if k == "y":
+                    self.y = v
+        else:
+            for idx, arg in enumerate(args):
+                if idx == 0:
+                    self.id = arg
+                if idx == 1:
+                    self.size = arg
+                if idx == 2:
+                    self.x = arg
+                if idx == 3:
+                    self.y = arg
 #
 #    def to_dictionary(self):
 #        """
