@@ -96,10 +96,12 @@ class Base:
 
         filename = cls.__name__+".json"
         try:
+            my_list = []
             with open(filename, mode='r', encoding='utf-8') as f:
                 my_json = cls.from_json_string(f.read())
             for inst in my_json:
-                    return [cls.create(**inst)]
+                my_list.append(cls.create(**inst))
+            return my_list
         except:
             return []
 
