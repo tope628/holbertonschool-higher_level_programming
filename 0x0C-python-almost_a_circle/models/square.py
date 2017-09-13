@@ -93,19 +93,19 @@ class Square(Rectangle):
                     self.x = arg
                 if idx == 3:
                     self.y = arg
-#
-#    def to_dictionary(self):
-#        """
-#     Args:
-#         my_obj (object): The first parameter.
-#         filename (file): The second parameter.
-#
-#     Returns:
-#        string: JSON string
-#        """
-#        my_dict = {}
-#        my_dict["id"] = self.id
-#        my_dict["size"] = self.size
-#        my_dict["x"] = self.x
-#        my_dict["y"] = self.y
-#        return my_dict
+
+    def to_dictionary(self):
+        """
+     Args:
+         my_obj (object): The first parameter.
+         filename (file): The second parameter.
+
+     Returns:
+        string: JSON string
+        """
+        my_dict = {}
+        my_dict["id"] = self.id
+        my_dict["size"] = self.size
+        my_dict["x"] = self.x
+        my_dict["y"] = self.y
+        return my_dict
