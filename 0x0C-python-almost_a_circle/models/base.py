@@ -139,5 +139,7 @@ class Base:
             return []
         with open(filename, mode='r', encoding='utf-8') as f:
             my_json = cls.from_json_string(f.read())
+        my_list = []
         for inst in my_json:
-                return [cls.create(**inst)]
+                my_list.append(cls.create(**inst))
+        return my_list
