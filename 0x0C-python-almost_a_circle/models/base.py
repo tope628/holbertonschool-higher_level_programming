@@ -54,3 +54,16 @@ class Base:
                     my_dict = obj.to_dictionary()
                     my_list.append(my_dict)
                 f.write(cls.to_json_string(my_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+     Args:
+         json_string (dict): The first parameter.
+
+     Returns:
+        string: JSON string
+        """
+        if json_string is None or json_string == {}:
+            return "[]"
+        return json.loads(json_string)
