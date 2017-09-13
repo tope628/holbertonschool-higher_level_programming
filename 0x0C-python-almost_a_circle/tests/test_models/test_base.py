@@ -35,24 +35,5 @@ class TestBase(unittest.TestCase):
         stf_doc = Base.save_to_file.__doc__
         self.assertTrue(len(stf_doc) > 1)
 
-    def test_presence_of_create_docstring(self):
-        c_doc = Base.create.__doc__
-        self.assertTrue(len(c_doc) > 1)
-
-    def test_presence_of_load_from_file_docstr(self):
-        lff_doc = Base.load_from_file.__doc__
-        self.assertTrue(len(lff_doc) > 1)
-
-    """Initialization tests"""
-    def test_empty_id(self):
-        self.base = Base()
-        self.assertEqual(base.id, 1)
-        del self.base
-
-    def test_pos_int_id(self):
-        self.base = Base(89)
-        self.assertEqual(base.id, 89)
-        del self.base
-
 if __name__ == "__main__":
     unittest.main()
