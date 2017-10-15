@@ -17,12 +17,12 @@ def add_integer(a, b):
      Returns:
          int: Addition of a and b. TypeError otherwise.
     """
-    if type(a) == float:
+    if type(a) is float:
         a = int(a)
-    if type(b) == float:
+    if type(b) is float:
         b = int(b)
-    if type(a) != int:
+    if type(a) is not int:
         raise TypeError("a must be an integer")
-    if type(b) != int:
+    if type(b) is not int:
         raise TypeError("b must be an integer")
     return a + b

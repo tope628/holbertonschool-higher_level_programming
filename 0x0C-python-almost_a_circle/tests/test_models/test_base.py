@@ -35,5 +35,7 @@ class TestBase(unittest.TestCase):
         stf_doc = Base.save_to_file.__doc__
         self.assertTrue(len(stf_doc) > 1)
 
+    """
+
 if __name__ == "__main__":
     unittest.main()
