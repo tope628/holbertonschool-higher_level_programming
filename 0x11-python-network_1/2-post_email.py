@@ -3,7 +3,8 @@
 fetches https://intranet.hbtn.io/status
 """
 import urllib.request
-from sys import agrv
+import urllib.parse
+from sys import argv
 
 if __name__ == "__main__":
     data = {'email': argv[2]}

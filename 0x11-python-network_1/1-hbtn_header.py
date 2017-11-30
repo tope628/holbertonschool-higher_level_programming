@@ -3,7 +3,7 @@
 fetches https://intranet.hbtn.io/status
 """
 import urllib.request
-from sys import agrv
+from sys import argv
 
 if __name__ == "__main__":
 
