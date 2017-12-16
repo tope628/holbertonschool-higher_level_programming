@@ -5,5 +5,5 @@ if (!num) {
   console.log('Missing size');
 }
 for (let i = 0; i < num; i++) {
-  console.log('x'.repeat(num));
+  console.log('X'.repeat(num));
 }
