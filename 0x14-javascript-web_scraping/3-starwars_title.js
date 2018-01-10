@@ -2,9 +2,7 @@
 
 const request = require('request');
 
-const options = {
-  url: 'http://swapi.co/api/films/' + process.argv[2]
-};
+const url = 'http://swapi.co/api/films/' + process.argv[2];
 
 function callback (error, response, body) {
   if (!error && response.statusCode === 200) {
@@ -13,4 +11,4 @@ function callback (error, response, body) {
   }
 }
 
-request(options, callback);
+request.get(url, callback);
