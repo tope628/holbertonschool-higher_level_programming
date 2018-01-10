@@ -9,12 +9,12 @@ function callback (error, response, body) {
     let info = JSON.parse(body).results;
     let count = 0;
     for (let i of info) {
-	for(let x of i.characters){  
-	      if (x.endsWith('18/')) {
-		count++;
-		      break;
-	      }
-    }
+      for (let x of i.characters) {
+        if (x.endsWith('18/')) {
+          count++;
+          break;
+        }
+      }
     }
     console.log(count);
   }
